@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 163">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Gradient);
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-3 {
+        fill: rgba(255,255,255,0);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="0.5" y1="0.097" x2="0.5" y2="1.157" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+    <clipPath id="clip-Gradient">
+      <rect width="1000" height="163"/>
+    </clipPath>
+  </defs>
+  <g id="Gradient" class="cls-1">
+    <rect class="cls-3" width="1000" height="163"/>
+    <rect id="Rectangle_115" data-name="Rectangle 115" class="cls-2" width="1000" height="163"/>
+  </g>
+</svg>
