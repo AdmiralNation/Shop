@@ -20,8 +20,6 @@
         <a href="All.html">
             <li class="vivify fadeIn delay-150">Shop</li>
         </a>
-
-
     </ul>
 </nav>
 <div class="socialicons">
@@ -31,29 +29,23 @@
     <a href="https://twitter.com/GHSstore" target="_blank"><img style="right: 310px;" src="Branding/Twitter%20Logo.svg"></a>
 </div>
 <a href="Adidas.html"><img class="adidas" src="Branding/2000px-Adidas_Logo.svg.png"></a>
-
-
 <script>
     var toggle = document.getElementById("menu");
     var content = document.getElementById("items");
     toggle.addEventListener("click", function () {
         content.style.display = (content.dataset.toggled ^= 1) ? "block" : "none";
     });
-
 </script>
 <div class="carouselwrapper">
     <div class="carousel2 " data-flickity='{ "draggable": true, "autoPlay": 2300, "pageDots": false  }'>
-        <div class="carousel-cell2 "><img src="ShopItems/CC Sweat Shirt.png"></div>
-
-
+        <div class="carousel-cell2 "><img src="ShopItems/tshirt3.png"></div>
     </div>
 </div>
 <div class="infocontainer vivify fadeIn delay-200">
     <div class="topmenu">
-        <h1>
-            Comfort Color Sweatshirt
+        <h1>Gulfport T-Shirt
         </h1>
-        <h3>$30.00</h3>
+        <h3>$12.00</h3>
         <h6 onclick="toggle_visibility('form');">Order For Pickup</h6>
         <h4 onclick="toggle_visibility('form');">Order For Pickup</h4>
     </div>
@@ -65,7 +57,7 @@
         <input type="text" name="E-Mail">
         <h3>Pickup Date</h3>
         <label for="start"></label>
-        <input type="date" id="start" name="Pickup Date" value="2018" min="2018-01-01" max="2018-12-31" /> </select>
+        <input type="date" id="start" name="Pickup Date" value="2018" min="2018-01-01" max="2018-12-31" />
         <h3>Size</h3>
         <select name="Item Size">
             <option value="Small">S</option>
@@ -74,15 +66,17 @@
             <option value="Extra Large">XL</option>
             <option value="Extra Extra Large">XXL</option>
         </select>
-
+        <h3>Color</h3>
+        <select id="country" name="Item Color">
+            <option value="White">White</option>
+        </select>
         <input type="text" style="box-shadow: 0px 0px 0px;border: none;cursor: default;margin: auto;width: 250px;margin-top: 20px;margin-bottom: 0px;pointer-events: none;"
-            value=" Comfort Color Sweatshirt  $30.00" name="Item" size="50">
+            value="Gulfport T-Shirt $12.00" name="Item" size="50">
         <br>
         <br>
         <input type="submit" value="Complete">
         <h3 style="margin: auto;width: 210px;margin-top: 10px;">Note: Transaction Made In Store </h3>
     </form>
-
     <div class="descriptcontainer">
         <h3>Information</h3>
         <div class="blockcontainer">
@@ -94,17 +88,14 @@
             <div class="block2container">
                 <h3>Colors Available</h3>
                 <div class="block2" style="width: 50px;">
-                    <div style="background-color:#70AFD2"></div>
+                    <div style="background-color:white;border: solid; border-width: 1.5px; border-color: lightgray"></div>
                 </div>
             </div>
         </div>
-        <div class="descriptiontext">
-            <h3>Description</h3>
-            <p>This Comfort Colors sweatshirt in ice blue has Gulfport Admirals in white. It is made of 80% cotton and
-                20% polyester.
-
-            </p>
-        </div>
+    </div>
+    <div class="descriptiontext">
+        <h3>Description</h3>
+        <p>Bella V-Neck tee in white has Gulfport layered in pastel colors. This shirt is oversized and super comfy.</p>
     </div>
 </div>
 <script>
