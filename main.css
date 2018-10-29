@@ -782,8 +782,6 @@ body {background-image: none}
 .topmenu {}
 
 .mySlides {margin-bottom: -100px}
-.prev{display: none}
-.next{display: none}
 .descriptcontainer > h3 {display: none}
 .descriptcontainer{width: 360px}
 .descriptiontext {width: 320px; text-align: center; margin-top: 10px}
