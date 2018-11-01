@@ -16,7 +16,6 @@ body {
 
     background-attachment: fixed;
     background-size: 2000px;
-    scroll-snap-type: y proximity;
     transition: 0.3s ease
 }
 
@@ -559,7 +558,7 @@ nav {
     position: fixed;
     left: 50%;
     top: 450px;
-    transform: translate(-50%, -50%);
+    trans : translate(-50%, -50%);
     z-index: -5;
 }
 
