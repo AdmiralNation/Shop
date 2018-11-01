@@ -13,7 +13,7 @@ body {
     font-family: roboto, sans-serif;
     margin: 0px;
     background-image: url(Branding/admiralnationbackground50%25.jpg);
-
+scroll-snap-type: y proximity;
     background-attachment: fixed;
     background-size: 2000px;
     transition: 0.3s ease
