@@ -1013,6 +1013,15 @@ marquee > a > img {
 }
 
 @media screen and (max-width: 1000px) {
+
+    .next {
+        display: none
+    }
+
+    .previous {
+        display: none
+    }
+
     .adidas {
         display: none
     }
@@ -1139,6 +1148,36 @@ marquee > a > img {
     .carousel-cell > img {
         box-shadow: 0px 0px 0px
     }
+
+    .carousel-cellimg > a > img {
+        width: 150px;
+        height: 178px;
+
+    }
+
+    .clothesh3 {
+        font-size: 14px;
+        margin-top: 10px
+    }
+
+    .carousel-cellimg > a > img:hover {
+        width: 150px;
+        height: 178px;
+        margin: 0px;
+    }
+
+    .carousel-cellimg {
+        margin-right: 11px;
+        height: 178px;
+    }
+
+    .carouselclothes {
+        width: 100%;
+        height: 258px;
+        margin-top: -35px;
+    }
+    
+    .seg2{margin-bottom: 50px;}
 }
 
 
@@ -1191,14 +1230,6 @@ marquee > a > img {
 
     .mySlides {
         margin-bottom: -100px
-    }
-
-    .prev {
-        display: none
-    }
-
-    .next {
-        display: none
     }
 
     .descriptcontainer > h3 {
