@@ -446,28 +446,34 @@ filter: saturate(1.2);
     background-color: white;
     padding-left: 43px;
     padding-bottom: 12px;
-    padding-top: 13px;
+    padding-top: 20px;
+ 
    
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.17);
     transition: 0.5s ease;
-    margin-left: 15px;
+ 
+    margin-top: -17.5px;
 }
 
 .filteritem:hover {
     box-shadow: 0px 4px 19px 0px rgba(0, 0, 0, 0.2);
-    z-index: 65;
+    z-index: 100;
+
 }
 
+
+
 .filter {
-    font-size: 14px;
+    font-size: 12px;
     text-align: center;
     position: fixed;
-    top: 57px;
+    top: 35vh;
 
-    padding-top: 49px;
- 
+    padding-top: 18px;
+   background-color: white;
     z-index: 53;
     right: 0px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.17);
+  
 }
 
 .hamburger {
@@ -541,11 +547,10 @@ filter: saturate(1.2);
 
 }
 
-.hero {margin:auto; width: 95%;}
+.hero {margin:auto; width: 100%;height: 35vw; }
 
-.heroimg {width: 95%;;object-fit:fill; box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.17) }
+.heroimg {width:100%;;object-fit:cover; box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.17); height: 35vw;transition: 0.5s linear;}
 
-.heroimg:hover {object-fit: scale-down}
 
 .clothescontainer {
     margin: auto;
@@ -1007,8 +1012,10 @@ marquee > a > img {
 
 @media screen and (max-width:1365px) {
     .clothescontainer {
-        width: 1000px;
+        width: 1200px;
     }
+
+    .clothescontainer > a >img {width: 315px;}
 }
 
 @media screen and (max-width: 1120px) {
@@ -1031,6 +1038,10 @@ marquee > a > img {
 }
 
 @media screen and (max-width: 1000px) {
+
+.filter {display: none; }
+
+.hero {display: none}
 
     .next {
         display: none
