@@ -447,7 +447,7 @@ filter: saturate(1.2);
     padding-left: 43px;
     padding-bottom: 12px;
     padding-top: 13px;
-    display: inline;
+   
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.17);
     transition: 0.5s ease;
     margin-left: 15px;
@@ -465,9 +465,9 @@ filter: saturate(1.2);
     top: 57px;
 
     padding-top: 49px;
-    display: none;
+ 
     z-index: 53;
-    left: 155px;
+    right: 0px;
 }
 
 .hamburger {
@@ -541,6 +541,12 @@ filter: saturate(1.2);
 
 }
 
+.hero {margin:auto; width: 95%;}
+
+.heroimg {width: 95%;;object-fit:fill; box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.17) }
+
+.heroimg:hover {object-fit: scale-down}
+
 .clothescontainer {
     margin: auto;
     width: 1700px;
@@ -571,7 +577,6 @@ filter: saturate(1.2);
     overflow: scroll;
 
 }
-
 
 
 .clothescontainer > h3 {
