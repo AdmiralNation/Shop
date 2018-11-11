@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Admiral Nation</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <link rel="shortcut icon" type="image/png" href="Branding/Favicon.png" />
+    <link rel="stylesheet" href="vivify.min.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<body style=" background-image: url(Assets/White.jpg)">
+    <nav>
+        <img class="menu" id="menu" src="Assets/outline-menu-24px (1).svg">
+        <a href="index.html"><img src="Branding/admiralnationdotcom Logo.png"></a>
+        <ul id="items">
+            <a href="index.html">
+                <li class="vivify fadeIn delay-100">Home</li>
+            </a>
+            <a href="All.html">
+                <li class="vivify fadeIn delay-150">Shop All</li>
+            </a>
+            <a href="clearence.html">
+                <li class="vivify fadeIn delay-150 active">Clearence</li>
+            </a>
+            <a href="https://goo.gl/maps/uRVhnmNfig32" target="_blank">
+                <li class="vivify fadeIn delay-150">Find Us</li>
+            </a>
+            <a href="feedback.html">
+                <li class="vivify fadeIn delay-150">Give Feedback</li>
+            </a>
+
+        </ul>
+    </nav>
+    <div class="socialicons">
+        <a href="https://www.snapchat.com/add/admiralnation" target="_blank"><img style="right: 190px;" src="Branding/Snapchat Logo.svg"></a>
+        <a href="https://www.instagram.com/admiral_nation/?utm_source=ig_profile_share&igshid=1ehxczpkif6wd" target="_blank"><img style="right: 250px;" src="Branding/Instagram%20Logo.svg"> </a>
+        <a href="https://twitter.com/GHSstore" target="_blank"><img style="right: 310px;" src="Branding/Twitter%20Logo.svg"></a>
+    </div>
+    <a href="Adidas.html"><img class="adidas" src="Branding/2000px-Adidas_Logo.svg.png"></a>
+
+
+
+
+
+    <div class="hero"><img class="heroimg" style="margin-top:76px;" id="T-Shirts" src="SlideShowIMGS/Clearance Hero.jpg"></div>
+
+    <h3 class="clothesh3 vivify fadeIn
+delay-300" id="T-Shirts" style="margin-top: 100px;">Clearence</h3>
+
+    <div class="carouselclothes vivify fadeIn delay-100 seg1 " style="margin-bottom: 150px;" data-flickity='{ "draggable": true,"pageDots": false,"groupCells": true  }'>
+
+        <div class="carousel-cellimg  delay-150"><a href="#" data-scroll><img class="vivify fadeIn delay-200" src="ShopItems/Clearance 1.jpg"></a>
+        </div>
+
+        <div class="carousel-cellimg  delay-200"> <a href="#" data-scroll><img class="vivify fadeIn delay-250" src="ShopItems/Clearance 2.jpg"></a>
+        </div>
+
+        <div class="carousel-cellimg  delay-200"><a href="#"><img class="vivify fadeIn delay-300" src="ShopItems/Clearance 3.jpg"></a>
+        </div>
+
+        <div class="carousel-cellimg  delay-200"><a href="#"><img class="vivify fadeIn delay-350" src="ShopItems/Clearance 4.jpg"></a>
+        </div>
+
+        <div class="carousel-cellimg  delay-200"><a href="#"><img class="vivify fadeIn delay-350" src="ShopItems/Clearance 5.jpg"></a>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    <footer>
+        <h3> ©2018 Admiral Nation</h3>
+    </footer>
+</body>
+</html>

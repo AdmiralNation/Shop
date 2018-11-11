@@ -11,223 +11,261 @@
     <link rel="stylesheet" href="vivify.min.css">
     <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
-<nav>
-    <img class="menu" id="menu" src="Assets/outline-menu-24px (1).svg">
-    <a href="index.html"><img src="Branding/admiralnationdotcom Logo.png"></a>
-    <ul id="items">
-        <a href="index.html">
-            <li class="vivify fadeIn delay-100">Home</li>
+
+<body style=" background-image: url(Assets/White.jpg)">
+    <nav>
+        <img class="menu" id="menu" src="Assets/outline-menu-24px (1).svg">
+        <a href="index.html"><img src="Branding/admiralnationdotcom Logo.png"></a>
+        <ul id="items">
+            <a href="index.html">
+                <li class="vivify fadeIn delay-100">Home</li>
+            </a>
+            <a href="All.html">
+                <li class="vivify fadeIn delay-150 active">Shop All</li>
+            </a>
+            <a href="https://goo.gl/maps/uRVhnmNfig32" target="_blank">
+                <li class="vivify fadeIn delay-150">Find Us</li>
+            </a>
+            <a href="feedback.html">
+                <li class="vivify fadeIn delay-150">Give Feedback</li>
+            </a>
+
+        </ul>
+    </nav>
+    <div class="socialicons">
+        <a href="https://www.snapchat.com/add/admiralnation" target="_blank"><img style="right: 190px;" src="Branding/Snapchat Logo.svg"></a>
+        <a href="https://www.instagram.com/admiral_nation/?utm_source=ig_profile_share&igshid=1ehxczpkif6wd" target="_blank"><img style="right: 250px;" src="Branding/Instagram%20Logo.svg"> </a>
+        <a href="https://twitter.com/GHSstore" target="_blank"><img style="right: 310px;" src="Branding/Twitter%20Logo.svg"></a>
+    </div>
+    <a href="Adidas.html"><img class="adidas" src="Branding/2000px-Adidas_Logo.svg.png"></a>
+
+
+
+    <div class="filter">
+        <a href="#T-Shirts">
+            <h2 class="filteritem" style="color: #012395">Browse</h2>
         </a>
-        <a href="All.html">
-            <li class="vivify fadeIn delay-150 active">Shop All</li>
-        </a>
-        <a href="https://goo.gl/maps/uRVhnmNfig32" target="_blank">
-            <li class="vivify fadeIn delay-150">Find Us</li>
-        </a>
-        <a href="feedback.html">
-            <li class="vivify fadeIn delay-150">Give Feedback</li>
+
+        <a href="#T-Shirts">
+            <h2 class="filteritem">T-Shirts</h2>
         </a>
 
-    </ul>
-</nav>
-<div class="socialicons">
-    <a href="https://www.snapchat.com/add/admiralnation" target="_blank"><img style="right: 190px;" src="Branding/Snapchat Logo.svg"></a>
-    <a href="https://www.instagram.com/admiral_nation/?utm_source=ig_profile_share&igshid=1ehxczpkif6wd" target="_blank"><img
-            style="right: 250px;" src="Branding/Instagram%20Logo.svg"> </a>
-    <a href="https://twitter.com/GHSstore" target="_blank"><img style="right: 310px;" src="Branding/Twitter%20Logo.svg"></a>
-</div>
-<a href="Adidas.html"><img class="adidas" src="Branding/2000px-Adidas_Logo.svg.png"></a>
+        <a href="#LongSleeve">
+            <h2 class="filteritem">Long Sleeve</h2>
+        </a>
+
+        <a href="#Hats">
+            <h2 class="filteritem">Hats</h2>
+        </a>
+
+        <a href="#Accesories">
+            <h2 class="filteritem">Accesories</h2>
+        </a>
+
+        <a href="#Bottoms">
+            <h2 class="filteritem">Bottoms</h2>
+        </a></div>
+
+    <script>
+        var toggle = document.getElementById("menu");
+        var content = document.getElementById("items");
+        toggle.addEventListener("click", function() {
+            content.style.display = (content.dataset.toggled ^= 1) ? "block" : "none";
+        });
+    </script>
 
 
 
-<div class="filter">
-    <a href="#T-Shirts">
-        <h2 class="filteritem" style="color: #012395">Browse</h2>
-    </a>
+    <div class="hero"><img class="heroimg" style="margin-top:76px;" src="SlideShowIMGS/T-Shirt Hero.jpg"></div>
 
-    <a href="#T-Shirts">
-        <h2 class="filteritem">T-Shirts</h2>
-    </a>
+    <h3 class="clothesh3 vivify fadeIn
+delay-300" style="margin-top: 80px;margin-bottom: -129px">T-Shirts</h3>
 
-    <a href="#LongSleeve">
-        <h2 class="filteritem">Long Sleeve</h2>
-    </a>
+    <div class="carouselclothes vivify fadeIn delay-100 seg1" id="T-Shirts" style="margin-top:90px;" data-flickity='{ "draggable": true,"pageDots": false,"groupCells": true  }'>
 
-    <a href="#Hats">
-        <h2 class="filteritem">Hats</h2>
-    </a>
+        <div class="carousel-cellimg blank1 delay-150"><a href="#" data-scroll><img class="vivify fadeIn delay-200" src="Assets/Blank.png"></a>
+        </div>
 
-    <a href="#Accesories">
-        <h2 class="filteritem">Accesories</h2>
-    </a>
+        <div class="carousel-cellimg blank2 delay-150"><a href="#" data-scroll><img class="vivify fadeIn delay-200" src="Assets/Blank.png"></a>
+        </div>
 
-    <a href="#Bottoms">
-        <h2 class="filteritem">Bottoms</h2>
-    </a></div>
+        <div class="carousel-cellimg  delay-150"><a href="tops_tshirt4.html" data-scroll><img class="vivify fadeIn delay-200" src="ShopItems/T-Shirt 4 Thumbnail.jpg"></a>
+        </div>
 
-<script>
-    var toggle = document.getElementById("menu");
-    var content = document.getElementById("items");
-    toggle.addEventListener("click", function () {
-        content.style.display = (content.dataset.toggled ^= 1) ? "block" : "none";
-    });
-</script>
+        <div class="carousel-cellimg  delay-200"> <a href="tops_tshirt3.html" data-scroll><img class="vivify fadeIn delay-250" src="ShopItems/T-Shirt3 Thumbnail.jpg"></a>
+        </div>
 
-<h3 class="clothesh3 vivify fadeIn
-delay-300" id="T-Shirts" style="margin-bottom: 25px;margin-top: 110px;">T-Shirts</h3>
+        <div class="carousel-cellimg  delay-200"><a href="tops_gucci1.html"><img class="vivify fadeIn delay-300" src="ShopItems/Gucci Thumbnail1.jpg"></a>
 
-<div class="hero"><img class="heroimg" id="T-Shirts" src="SlideShowIMGS/T-Shirt Hero.jpg"></div>
+        </div>
 
-<div class="carouselclothes vivify fadeIn delay-100 seg1" data-flickity='{ "draggable": true,"pageDots": false,"groupCells": true  }'>
+        <div class="carousel-cellimg  delay-200"><a href="tops_tshirt2.html"><img class="vivify fadeIn delay-300" src="ShopItems/T-Shirt2 Thumbnail.jpg"></a>
+        </div>
 
-    <div class="carousel-cellimg  delay-150"><a href="tops_tshirt4.html" data-scroll><img class="vivify fadeIn delay-200"
-                src="ShopItems/T-shirt4.jpg"></a>
-    </div>
+        <div class="carousel-cellimg  delay-200"><a href="tops_tshirt1.html"><img class="vivify fadeIn delay-350" src="ShopItems/T-Shirt1 Thumbnail.jpg"></a>
+        </div>
 
-    <div class="carousel-cellimg  delay-200"> <a href="tops_tshirt3.html" data-scroll><img class="vivify fadeIn delay-250"
-                src="ShopItems/T-shirt3.jpg"></a>
-    </div>
-
-    <div class="carousel-cellimg  delay-200"><a href="tops_tshirt2.html"><img class="vivify fadeIn delay-300" src="ShopItems/T-Shirts.jpg"></a>
-    </div>
-
-    <div class="carousel-cellimg  delay-200"><a href="tops_tshirt1.html"><img class="vivify fadeIn delay-350" src="ShopItems/T-Shirt Women.jpg"></a>
-    </div>
-</div>
-
-
-
-
-
-
-<h3 class="clothesh3 vivify fadeIn
-delay-300" style="margin-bottom: 25px;margin-top: 30px;">Long Sleeve</h3>
-
-<div class="hero"><img class="heroimg" id="LongSleeve" src="SlideShowIMGS/Long Sleeve Hero.jpg"></div>
-
-<div class="carouselclothes vivify fadeIn delay-100 seg1" data-flickity='{ "draggable": true,"pageDots": false,"groupCells": true  }'>
-
-    <div class="carousel-cellimg  delay-150"> <a href="tops_sweatshirt.html" data-scroll><img class="vivify fadeIn delay-400"
-                src="ShopItems/Sweatshirts.jpg"></a>
-    </div>
-
-    <div class="carousel-cellimg  delay-200"> <a href="tops_hoodies.html" data-scroll><img class="vivify fadeIn delay-300"
-                src="ShopItems/Hoodies.jpg"></a>
-    </div>
-
-    <div class="carousel-cellimg  delay-200"><a href="tops_hoodies2.html"><img class="vivify pullDown delay-300" src="ShopItems/darkhoodie.jpg"></a>
-    </div>
-
-    <div class="carousel-cellimg  delay-200"><a href="tops_longsleevetshirt3.html" data-scroll><img class="vivify fadeIn delay-450"
-                src="ShopItems/lsleevetshirt2.jpg"></a>
-    </div>
-
-
-    <div class="carousel-cellimg  delay-200"><a href="tops_longsleevetshirt2.html" data-scroll><img class="vivify fadeIn delay-150"
-                src="ShopItems/lsleevetshirt.jpg"></a>
+        <div class="carousel-cellimg  delay-200"><a href="tops_menspoloshirt.html"><img class="vivify fadeIn delay-350" src="ShopItems/Polo Shirt Thumbnail.jpg"></a>
+        </div>
     </div>
 
 
 
-    <div class="carousel-cellimg  delay-200"> <a href="tops_zippullover.html" data-scroll><img class="vivify fadeIn delay-500"
-                src="ShopItems/ZipPullover.jpg"></a>
-    </div>
-
-    <div class="carousel-cellimg  delay-200"> <a href="tops_longsleevetshirt.html" data-scroll><img class="vivify fadeIn delay-550"
-                src="ShopItems/LongsleeveT-shirt.jpg"></a>
-    </div>
-
-    <div class="carousel-cellimg  delay-200"> <a href="tops_rainjacketwindbreaker.html" data-scroll><img class="vivify fadeIn delay-600"
-                src="ShopItems/Rain JacketWindbreaker.jpg"></a>
-    </div>
 
 
-</div>
+    <div class="hero" style="margin-top:140px;"><img class="heroimg" src="SlideShowIMGS/Long Sleeve Hero.jpg"></div>
+
+    <h3 class="clothesh3 vivify fadeIn
+delay-300">Long Sleeve</h3>
+
+    <div class="carouselclothes vivify fadeIn delay-100 seg1" id="LongSleeve" data-flickity='{ "draggable": true,"pageDots": false,"groupCells": true  }'>
+
+        <div class="carousel-cellimg blank1 delay-150"><a href="#" data-scroll><img class="vivify fadeIn delay-200" src="Assets/Blank.png"></a>
+        </div>
+
+        <div class="carousel-cellimg blank2 delay-150"><a href="#" data-scroll><img class="vivify fadeIn delay-200" src="Assets/Blank.png"></a>
+        </div>
+
+        <div class="carousel-cellimg  delay-150"> <a href="tops_sweatshirt.html" data-scroll><img style="box-shadow:0px 0px 0px;" class="vivify fadeIn delay-400" src="ShopItems/Sweatshirts.jpg"></a>
+        </div>
+
+        <div class="carousel-cellimg  delay-200"> <a href="tops_hoodies.html" data-scroll><img class="vivify fadeIn delay-300" src="ShopItems/Hoodie Thumbnail.jpg"></a>
+        </div>
+
+        <div class="carousel-cellimg  delay-200"><a href="tops_hoodies2.html"><img class="vivify pullDown delay-300" src="ShopItems/Charcoal Hoodie Thumbnail.jpg"></a>
+        </div>
+
+        <div class="carousel-cellimg  delay-200"><a href="tops_longsleevetshirt3.html" data-scroll><img class="vivify fadeIn delay-450" src="ShopItems/Long Sleeve Thumbnail2.jpg"></a>
+        </div>
 
 
+        <div class="carousel-cellimg  delay-200"><a href="tops_longsleevetshirt2.html" data-scroll><img class="vivify fadeIn delay-150" src="ShopItems/Long Sleeve Thumbnail.jpg"></a>
+        </div>
 
 
+        <div class="carousel-cellimg  delay-200"><a href="tops_sweatshirt2.html"><img class="vivify fadeIn delay-300" src="ShopItems/Sweatshirt Thumbnail.jpg"></a>
+
+        </div>
+
+        <div class="carousel-cellimg  delay-200"> <a href="tops_zippullover.html" data-scroll><img class="vivify fadeIn delay-500" src="ShopItems/Quarter Zip Thumbnail.jpg"></a>
+        </div>
+
+        <div class="carousel-cellimg  delay-200"> <a href="tops_longsleevetshirt.html" data-scroll><img class="vivify fadeIn delay-550" src="ShopItems/Long sleeve T-Shirt1 Thumbnail.jpg"></a>
+        </div>
+
+        <div class="carousel-cellimg  delay-200"> <a href="tops_rainjacketwindbreaker.html" data-scroll><img class="vivify fadeIn delay-600" src="ShopItems/Windbreaker Thumbnail.jpg"></a>
+        </div>
 
 
-<h3 class="clothesh3 vivify fadeIn
-delay-300" style="margin-bottom: 25px;margin-top: 30px;">Hats</h3>
-
-<div class="hero"><img class="heroimg" id="Hats" src="SlideShowIMGS/Hats Hero.jpg"></div>
-
-<div class="carouselclothes vivify fadeIn delay-100 seg1" data-flickity='{ "draggable": true,"pageDots": false,"groupCells": true  }'>
-
-    <div class="carousel-cellimg  delay-150"> <a href="hats_pompom.html" data-scroll><img class="vivify fadeIn delay-1000"
-                src="ShopItems/Pom Pom Beenie.jpg"></a>
-    </div>
-
-    <div class="carousel-cellimg  delay-200"> <a href="hats_visors.html" data-scroll><img class="vivify fadeIn " src="ShopItems/AdidasVisor.jpg"></a>
-    </div>
-
-    <div class="carousel-cellimg  delay-200"><a href="hats_baseballhat.html" data-scroll><img class="vivify fadeIn delay-900"
-                src="ShopItems/Baseball Hat.jpg"></a>
-    </div>
-
-</div>
-
-
-
-
-
-
-<h3 class="clothesh3 vivify fadeIn
-delay-300" style="margin-bottom: 25px;margin-top: 30px;">Accesories</h3>
-
-<div class="hero"><img class="heroimg" id="Accesories" src="SlideShowIMGS/Other Hero.jpg"></div>
-
-<div class="carouselclothes vivify fadeIn delay-100 seg1" data-flickity='{ "draggable": true,"pageDots": false,"groupCells": true  }'>
-
-    <div class="carousel-cellimg  delay-150"> <a href="other_ghsmagnet.html" style="display: " data-scroll><img class="vivify fadeIn delay-1250"
-                src="ShopItems/Magnet.jpg"></a>
-    </div>
-
-    <div class="carousel-cellimg  delay-200"> <a href="other_siliconwallet.html" data-scroll><img class="vivify fadeIn delay-1500"
-                src="ShopItems/SiliconePhoneWallet.jpg"></a>
-    </div>
-
-    <div class="carousel-cellimg  delay-200"><a href="other_stadiumseat.html" data-scroll><img class="vivify fadeIn delay-1750"
-                src="ShopItems/StadiumSeats.jpg"></a>
-    </div>
-
-</div>
-
-
-
-
-
-
-
-<h3 class="clothesh3 vivify fadeIn
-delay-300" style="margin-bottom: 25px;margin-top: 30px;">Bottoms</h3>
-
-<div class="hero"><img class="heroimg" id="Bottoms" src="SlideShowIMGS/Bottoms Hero.jpg"></div>
-
-<div class="carouselclothes vivify fadeIn delay-100 seg1" data-flickity='{ "draggable": true,"pageDots": false,"groupCells": true  }'>
-
-    <div class="carousel-cellimg  delay-150"> <a href="bottoms_leggings.html" style="display: " data-scroll><img class="vivify fadeIn delay-1250"
-                src="ShopItems/Leggings.jpg"></a>
     </div>
 
 
-</div>
 
 
 
-<script>document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
 
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
+
+
+    <div class="hero" style="margin-top:140px;"><img class="heroimg" src="SlideShowIMGS/Hats Hero.jpg"></div>
+
+    <h3 class="clothesh3 vivify fadeIn
+delay-300">Hats</h3>
+
+    <div class="carouselclothes vivify fadeIn delay-100 seg1" id="Hats" data-flickity='{ "draggable": true,"pageDots": false,"groupCells": true  }'>
+
+        <div class="carousel-cellimg blank1 delay-150"><a href="#" data-scroll><img class="vivify fadeIn delay-200" src="Assets/Blank.png"></a>
+        </div>
+
+        <div class="carousel-cellimg blank2 delay-150"><a href="#" data-scroll><img class="vivify fadeIn delay-200" src="Assets/Blank.png"></a>
+        </div>
+
+
+        <div class="carousel-cellimg  delay-150"> <a href="hats_pompom.html" data-scroll><img class="vivify fadeIn delay-1000" src="ShopItems/Pom Pom Beanie Thumbnail.jpg"></a>
+        </div>
+
+        <div class="carousel-cellimg  delay-200"> <a href="hats_visors.html" data-scroll><img class="vivify fadeIn " src="ShopItems/Adidas Visor Thumbnail.jpg"></a>
+        </div>
+
+        <div class="carousel-cellimg  delay-200"><a href="hats_baseballhat.html" data-scroll><img class="vivify fadeIn delay-900" src="ShopItems/Baseball Hat Thumbnail.jpg"></a>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+    <div class="hero" style="margin-top:140px;"><img class="heroimg" src="SlideShowIMGS/Other Hero.jpg"></div>
+
+    <h3 class="clothesh3 vivify fadeIn
+delay-300">Accesories</h3>
+
+    <div class="carouselclothes vivify fadeIn delay-100 seg1" id="Accesories" data-flickity='{ "draggable": true,"pageDots": false,"groupCells": true  }'>
+
+
+        <div class="carousel-cellimg blank1 delay-150"><a href="#" data-scroll><img class="vivify fadeIn delay-200" src="Assets/Blank.png"></a>
+        </div>
+
+        <div class="carousel-cellimg blank2 delay-150"><a href="#" data-scroll><img class="vivify fadeIn delay-200" src="Assets/Blank.png"></a>
+        </div>
+
+        <div class="carousel-cellimg  delay-150"> <a href="other_ghsmagnet.html" style="display: " data-scroll><img class="vivify fadeIn delay-1250" src="ShopItems/Magnet Thumbnail.jpg"></a>
+        </div>
+
+        <div class="carousel-cellimg  delay-200"> <a href="other_siliconwallet.html" data-scroll><img class="vivify fadeIn delay-1500" src="ShopItems/PhoneWallet Thumbnail.jpg"></a>
+        </div>
+
+        <div class="carousel-cellimg  delay-200"><a href="other_stadiumseat.html" data-scroll><img class="vivify fadeIn delay-1750" src="ShopItems/Stadium Seat Thumbnail.jpg"></a>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+    <div class="hero" style="margin-top:140px;"><img class="heroimg" src="SlideShowIMGS/Bottoms Hero.jpg"></div>
+
+    <h3 class="clothesh3 vivify fadeIn
+delay-300">Bottoms</h3>
+
+
+    <div class="carousel-cellimg blank1 delay-150"><a href="#" data-scroll><img class="vivify fadeIn delay-200" src="Assets/Blank.png"></a>
+    </div>
+
+    <div class="carousel-cellimg blank2 delay-150"><a href="#" data-scroll><img class="vivify fadeIn delay-200" src="Assets/Blank.png"></a>
+    </div>
+
+    <div class="carouselclothes vivify fadeIn delay-100 seg1" id="Bottoms" data-flickity='{ "draggable": true,"pageDots": false,"groupCells": true  }'>
+
+        <div class="carousel-cellimg  delay-150"> <a href="bottoms_leggings.html" style="display: " data-scroll><img class="vivify fadeIn delay-1250" src="ShopItems/Adidas Leagings Thumbnail.jpg"></a>
+        </div>
+
+
+    </div>
+
+
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
         });
-    });</script>
-<footer>
-    <h3> ©2018 Admiral Nation</h3>
-</footer>
+    </script>
+    <footer>
+        <h3> ©2018 Admiral Nation</h3>
+    </footer>
+</body>
 
 </html>
