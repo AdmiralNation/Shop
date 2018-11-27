@@ -46,7 +46,7 @@ footer {
     z-index: 50;
     border-top: solid;
     border-color: lightgray;
-    border-width: 1.5px;
+    border-width: 1.3px;
 }
 
 footer > h3 {
@@ -336,7 +336,7 @@ nav {
     margin-top: 75px;
     height: calc(80vh - 110px);
     border-bottom: solid;
-    border-width: 1.5px;
+    border-width: 1.3px;
     border-color: lightgray;
 }
 
@@ -545,7 +545,7 @@ nav {
     filter: saturate(1.15);
     vertical-align: top;
     border: solid;
-    border-width: 1.5px;
+    border-width: 1.3px;
     border-color: lightgray;
 
 }
@@ -693,9 +693,9 @@ nav {
 
 .paginate {
     margin: auto;
-    width: 213px;
+    width: 208px;
     border: solid;
-    border-width: 1.5px;
+    border-width: 1.3px;
     border-color: lightgray;
     padding-top: 10px;
     padding-bottom: 10px;
