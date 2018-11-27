@@ -1220,10 +1220,7 @@ marquee > a > img {
     }
 
     .mcontainer {
-        width: 100%;
         display: block;
-        position: fixed;
-        height: 100%;
     }
 
     .mcontainer > a > button {
