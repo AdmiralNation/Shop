@@ -20,9 +20,6 @@
         <a href="All.html">
             <li class="vivify fadeIn delay-150">Shop All</li>
         </a>
-        <a href="clearence.html">
-            <li class="vivify fadeIn delay-150">Clearance</li>
-        </a>
         <a href="https://goo.gl/maps/uRVhnmNfig32" target="_blank">
             <li class="vivify fadeIn delay-150">Find Us</li>
         </a>
@@ -46,24 +43,19 @@
     toggle.addEventListener("click", function () {
         content.style.display = (content.dataset.toggled ^= 1) ? "block" : "none";
     });
+
 </script>
 <div class="carouselwrapper">
     <div class="carousel2 " data-flickity='{ "draggable": true, "autoPlay": 2300, "pageDots": false  }'>
-        <div class="carousel-cell2 "><img src="ShopItems/theadmiralssweatshirt.png"></div>
-
+        <div class="carousel-cell2 "><img src="ShopItems/beanie.png"></div>
 
 
     </div>
 </div>
-
-
-
-</div>
 <div class="infocontainer">
-
     <div class="topmenu">
         <h1>
-            Admirals Longsleeve T-Shirt
+            Adidas Beanie
         </h1>
         <h3>$20.00</h3>
         <h6 onclick="toggle_visibility('form');">Order For Pickup</h6>
@@ -71,7 +63,7 @@
     </div>
     <form style="display: none" action="https://docs.google.com/forms/u/2/d/e/1FAIpQLSdEPTYEQmsVLSRjeabz0ENtYO9XetfUm3MyIM_nekYt2rRqEw/formResponse" class="vivify pullDown" id="form">
 
-        <input type="text" style="box-shadow: 0px 0px 0px;" name="entry.838953622" value="Admirals Longsleeve T-Shirt $20.00" required readonly>
+        <input type="text" style="box-shadow: 0px 0px 0px;" name="entry.838953622" value="Adidas Beanie $20.00" required readonly>
 
         <label>Name</label>
         <input type="text" name="entry.424118168" required>
@@ -86,7 +78,7 @@
         <input type="text" name="entry.31267234">
 
         <label style="display:none">Item Link </label>
-        <input style="display:none" type="text" value="https://admiralnation.github.io/SHOP/tops_admiralsweatshirt.html" name="entry.275824274">
+        <input style="display:none" type="text" value="https://admiralnation.github.io/SHOP/hats_beanie.html" name="entry.275824274">
 
         <input type="submit" value="Complete">
         <label style="margin-left: 10px;">Open Hours: 8:20am - 3:30pm Weekdays</label>
@@ -97,19 +89,19 @@
         <div class="blockcontainer">
             <div class="block1container">
                 <h3>Sizes Available</h3>
-                <div class="block1"> <img src="Assets/Small%20Size.svg"><img src="Assets/Medium%20Size.svg"><img src="Assets/Large%20Size.svg"><img src="Assets/X%20Large%20Size.svg"><img src="Assets/XX Large Size.svg"> </div>
+                <div class="block1" style="width: 115px;"> <img style="width: 94px;" src="Assets/One Size.svg"> </div>
             </div>
             <div class="block2container">
                 <h3>Colors Available</h3>
                 <div class="block2" style="width: 50px;">
-                    <div style="background-color:#ff6c00"></div>
+                    <div style="background-color: white; border: solid; border-width: 1.5px;border-color: lightgray"></div>
                 </div>
             </div>
         </div>
         <div class="descriptiontext">
             <h3>Description</h3>
-            <p>This Comfort Colors sweatshirt in orange has Gulfport Admirals in white. It is made of 80% cotton and
-                20% polyester.
+            <p>This Adidas beanie is royal blue with the Gulfport logo centered in the front and Adidas logo centered on the back.
+
             </p>
         </div>
     </div>
@@ -145,6 +137,7 @@
         slides[slideIndex - 1].style.display = "block";
         dots[slideIndex - 1].className += " activedot";
     }
+
 </script>
 <script type="text/javascript">
     function toggle_visibility(id) {
@@ -152,6 +145,7 @@
         if (e.style.display == 'block') e.style.display = 'none';
         else e.style.display = 'block';
     }
+
 </script>
 <footer>
     <h3> ©2018 Admiral Nation</h3>
