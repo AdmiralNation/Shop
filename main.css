@@ -18,7 +18,7 @@ body {
 
     transition: 0.3s ease;
 
-
+    link {}
 }
 
 
@@ -119,7 +119,7 @@ footer > h3 {
     border: none
 }
 
-ul > a > li {
+nav > ul > a > li {
     display: inline;
     text-decoration: none;
     margin-left: 25px;
@@ -130,7 +130,7 @@ ul > a > li {
 
 }
 
-ul > li {
+nav > ul > li {
     display: inline;
     text-decoration: none;
     margin-left: 25px;
@@ -181,6 +181,92 @@ nav {
     border-bottom: solid;
     border-width: 1px;
     border-color: lightgray;
+}
+
+
+.wrapper-search > ul > li > a {
+    text-decoration: none;
+    color: black;
+
+    float: left;
+    background-color: white;
+
+    margin-top: 12px;
+    width: 180px;
+    margin-left: -35px;
+    padding: 5px;
+
+    transition: .3s ease;
+}
+
+.wrapper-search > ul > li > a:hover {
+    background-color: lightgray;
+}
+
+.wrapper-search > ul {
+    display: none;
+    list-style-type: none;
+    transition: .2s ease;
+}
+
+
+#myUL {
+    margin: auto;
+    width: 167px;
+    overflow-y: scroll;
+    height: 256px;
+
+    background-color: white;
+    border-color: lightgray;
+
+
+}
+
+.wrapper-search > img {
+    width: 17px;
+    position: absolute;
+    left: 8px;
+    top: 6px;
+}
+
+#myUL::-webkit-scrollbar {
+    display: none; // Safari and Chrome
+}
+
+#myUL:hover {
+    display: block;
+}
+
+
+
+.wrapper-search {
+    position: fixed;
+    right: 222px;
+    margin-top: -27px;
+    border: solid;
+    border-width: 1.3px;
+    transition: .3s ease;
+    border-color: lightgray;
+}
+
+
+
+#myInput {
+    padding: 7px;
+    border: none;
+    transition: 0.3s ease;
+
+}
+
+
+
+input:focus {
+    outline: none;
+}
+
+input:focus ~ ul {
+    display: block;
+
 }
 
 .popupm {
@@ -731,7 +817,7 @@ nav {
 .carousel2 {
     width: 1000px;
     border: solid;
-    border-width: 1.5px;
+    border-width: 1.3px;
     border-color: lightgray;
 }
 
@@ -756,6 +842,29 @@ nav {
 
 }
 
+
+.wrapper-search {
+    position: fixed;
+    top: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .flickity-prev-next-button {
 
     background-color: white;
@@ -779,7 +888,7 @@ nav {
     background-color: white;
 
     border: solid;
-    border-width: 1.5px;
+    border-width: 1.3px;
     border-color: lightgray;
 }
 
@@ -1167,7 +1276,9 @@ marquee > a > img {
 @media screen and (max-width: 1120px) {
 
 
-
+    .wrapper-search {
+        display: none;
+    }
 
     .infocontainer {
         width: 100%;
@@ -1243,7 +1354,7 @@ marquee > a > img {
         height: 100%;
     }
 
-    ul {
+    #items {
         position: fixed;
         right: 0px;
         width: 187px;
