@@ -13,12 +13,10 @@ body {
     font-family: roboto, sans-serif;
     margin: 0px;
 
-    background-attachment: fixed;
-    background-size: 2000px;
-
     transition: 0.3s ease;
 
-    link {}
+    background-image: url(Assets/Snowflake-Pattern.png);
+    background-attachment: fixed;
 }
 
 
@@ -146,11 +144,26 @@ ul > a > li:hover {
 
 }
 
+.holiday-img {
+    width: 80px;
+    position: fixed;
+    height: 80px;
+    background-image: url(http://inovitagency.com/wp-content/uploads/2016/11/video-to-gif.gif);
+    top: 50px;
+    right: 50px;
+    z-index: 20;
+    background-size: cover;
+}
+
 nav > a > img {
     position: fixed;
     width: 180px;
     top: 13px;
-    left: 25px;
+    left: -14px;
+
+    padding-right: 53px;
+    padding-left: 50px;
+    background-image: url()
 }
 
 
@@ -175,12 +188,14 @@ nav {
 
     left: 0px;
     z-index: 50;
-    background-color: white;
+
     height: 78px;
     top: 0px;
     border-bottom: solid;
     border-width: 1px;
     border-color: lightgray;
+
+    background-color: #FFFFFF;
 }
 
 
@@ -680,7 +695,9 @@ input:focus ~ ul {
     z-index: 0;
     text-align: center;
     display: none;
-
+    border: solid;
+    border-width: 1.3px;
+    border-color: lightgray;
 }
 
 .hero {
@@ -714,6 +731,7 @@ input:focus ~ ul {
     margin-top: 49px;
     vertical-align: middle;
 
+
 }
 
 
@@ -734,6 +752,7 @@ input:focus ~ ul {
     border: solid;
     border-color: lightgray;
     border-width: 1.3px;
+
 }
 
 
@@ -763,7 +782,7 @@ input:focus ~ ul {
 .clothescontainer > a > img:hover {
 
     filter: saturate(1.5);
-    border-color: white;
+    border-color: transparent;
 
 
 
@@ -786,6 +805,7 @@ input:focus ~ ul {
     padding-top: 10px;
     padding-bottom: 10px;
     margin-bottom: 73px;
+    background-color: white;
 }
 
 .paginate > a {
@@ -1378,6 +1398,7 @@ marquee > a > img {
     nav > a > img {
         width: 150px;
         top: 10px;
+
     }
 
     nav {
