@@ -15,7 +15,7 @@ body {
 
     transition: 0.3s ease;
 
-    background-image: url(Assets/Snowflake-Pattern.png);
+   background-color:white;
     background-attachment: fixed;
 }
 
