@@ -15,7 +15,7 @@ body {
 
     transition: 0.3s ease;
 
-   background-color:white;
+    background-color: white;
     background-attachment: fixed;
 }
 
@@ -784,7 +784,7 @@ input:focus ~ ul {
     filter: saturate(1.5);
     border-color: transparent;
 
-
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
 
 
 }
@@ -836,9 +836,7 @@ input:focus ~ ul {
 
 .carousel2 {
     width: 1000px;
-    border: solid;
-    border-width: 1.3px;
-    border-color: lightgray;
+
 }
 
 .clothesh3 {
@@ -846,11 +844,12 @@ input:focus ~ ul {
 }
 
 .carouselwrapper {
-    position: fixed;
-    left: 50%;
-    top: 450px;
-    transform: translate(-50%, -50%);
-    z-index: -5;
+    position: relative;
+    margin: auto;
+    width: 1000px;
+    z-index: 0;
+    margin-bottom: -70px;
+    margin-top: 75px;
 }
 
 .carousel-cell2 > img {
@@ -897,19 +896,21 @@ input:focus ~ ul {
 
 .infocontainer {
     margin: auto;
-    width: 1000px;
-    margin-top: 670px;
+    width: 1010px;
+    margin-top: 0px;
     padding-top: 6px;
     padding-bottom: 128px;
     transition: 1s ease;
-    width: 1000px;
+
 
     margin-bottom: 105px;
     background-color: white;
-
-    border: solid;
-    border-width: 1.3px;
+    border-top: solid;
+    border-top-width: 1.3px;
     border-color: lightgray;
+    position: relative;
+    z-index: 15;
+
 }
 
 .gradient {
@@ -921,7 +922,7 @@ form {
     width: 289px;
     z-index: 54;
     margin-bottom: 0px;
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.17);
+
     padding-left: 33px;
     padding-top: 16px;
     padding-bottom: 14px;
@@ -930,7 +931,9 @@ form {
     padding-right: 6px;
     position: fixed;
     top: 100px;
-
+    border: solid;
+    border-width: 1.3px;
+    border-color: lightgray;
 }
 
 .feedbackcontainer {
@@ -1416,7 +1419,8 @@ marquee > a > img {
     }
 
     .carouselwrapper {
-        top: 250px;
+        top: 0px;
+        width: 300px;
     }
 
     .carousel-cell2 > img {
@@ -1424,7 +1428,7 @@ marquee > a > img {
     }
 
     .carousel2 {
-
+        width: 300px;
         margin-top: 75px;
 
     }
@@ -1530,6 +1534,7 @@ marquee > a > img {
         width: 200px;
         height: 178px;
         margin: 0px;
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.17);
     }
 
 
