@@ -865,11 +865,14 @@ input:focus ~ ul {
 .wrapper-search {
     position: fixed;
     top: 50px;
+    display: none;
 }
 
 
 
-
+.altsrc {
+    display: block;
+}
 
 
 
@@ -896,7 +899,7 @@ input:focus ~ ul {
 
 .infocontainer {
     margin: auto;
-    width: 1015px;
+    width: 1010px;
     margin-top: 0px;
     padding-top: 6px;
     padding-bottom: 128px;
@@ -1170,6 +1173,14 @@ input[type=submit]:active {
 }
 
 .block2 > div {
+    width: 35px;
+    height: 35px;
+    margin-left: 10px;
+    float: left;
+    border-radius: 50px;
+}
+
+.block2 > a > div {
     width: 35px;
     height: 35px;
     margin-left: 10px;
