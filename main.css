@@ -454,7 +454,7 @@ input:focus~ul {
     border-bottom: solid;
     border-width: 1.3px;
     border-color: lightgray;
-    height: calc(80vh - 110px);
+    height: 469px;
 }
 
 
