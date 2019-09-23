@@ -10,8 +10,157 @@
     <link rel="shortcut icon" type="image/png" href="Branding/Favicon.png" />
     <link rel="stylesheet" href="vivify.min.css">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/@ungap/custom-elements-builtin"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js">
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $.getJSON('https://api.sheety.co/08786f05-07e1-44d9-b3f8-e0e776b3990d', function (data) {
+                var template = Handlebars.compile($('#item-template').html())
+                $('#items1').html(template(data))
+            })
+        })
+    </script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script id="item-template" type="text/x-handlebars-template">
+
+        <div class="clothescontainer">
+         
+            
+        {{#each this}}
+
+ 
+     
+<style>
+#{{iD1}} {display:none;}
+
+#{{iD1}}:target {display:block;}
+</style>
+          
+                <div  class="item-container filterDiv {{category}} {{status}}"><h4 class=" stock {{state}}">Out of Stock</h4>
+                       {{{image}}}<h3>{{itemName}}</h3><p>{{price}}</p>   <div  class="shop-btn-container"><a class="shop-btn" href="#{{iD1}}">Shop</a></div>
+                    <div data-aos="fade-up"></div></div>
+          
+             <div id="{{iD1}}" class="item-popup">
+            
+                 <div class="popup-container vivify fadeInBottom duration-300">
+                        <a href="#shop"><i class="material-icons">close</i></a>
+                <div class="image-popup">
+                        {{{image}}}
+                </div>  
+
+             <div class="basic-text">
+                 <h3>{{itemName}}</h3>
+                 <p>{{price}}</p>
+                 <div class="size-options">
+                    <div class="Sizes {{small}}"><p>S</p></div>
+                    <div class="Sizes {{medium}}"><p>M</p></div>
+                    <div class="Sizes {{large}}"><p>L</p></div>
+                    <div class="Sizes {{xLarge}}"><p>XL</p></div>
+                    <div class="Sizes {{xXLarge}}"><p>XXL</p></div>
+                </div>
+                <div class="description">{{description}}</div>
+           
+                
+
+                    
+                    <div class="form-container vivify fadeIn duration-200">
+                    <div class="pickup-form" id="{{iD2}}">
+                            <h3>Order For Pickup</h3>
+                                  <form action="https://docs.google.com/forms/u/5/d/e/1FAIpQLSdEPTYEQmsVLSRjeabz0ENtYO9XetfUm3MyIM_nekYt2rRqEw/formResponse" method="POST" target="_self">
+                                <input name="entry.838953622" style="display: none;" type="text" placeholder="{{itemName}}" value="{{itemName}}">
+                                <div class="pickupgroup" style="margin-left: 0px;">  
+                                    <label>Enter Your Name</label>
+                                <br>
+                               
+                                <input name="entry.424118168" class="pickupinput half-input" type="text" placeholder="Your Name">
+                            </div>
+                            <div class="pickupgroup">
+                                <label>Enter Your E-Mail</label>
+                                <br>
+                           
+                                <input name="entry.1881122601" class="pickupinput half-input" type="email" placeholder="Your E-Mail">
+                            </div>
+                                <br>
+                                <label>Pickup Date</label>
+                                <input name="entry.199026238" class="pickupinput" type="date">
+                                <br>
+                                    
+                            <label>Pickup Time</label>
+                                    <input class="pickupinput" type="time" name="entry.2134677315">
+                                    <label>Choose A Size</label>
+                                    <br>
+                                    <select name="entry.31267234" class="filter forform" id = "myList">
+                                            <option>Select Size</option>
+                                            <option class="{{small}}" value = "small">Small</option>
+                                            <option class="{{medium}}" value = "medium">Medium</option>
+                                            <option class="{{large}}" value = "large">Large</option>
+                                            <option class="{{xLarge}}" value = "xlarge">XLarge</option>
+                                          </select>
+                                 <br>
+                                 <div class="submit-container">
+                                    <button type="submit">Complete Order</button>
+                                </div>
+                                <p style="text-align: center;font-size:12px;color:black">Open Hours: 8:20am - 3:30pm Weekdays</p>
+                                </form>
+                            </div>
+                        </div>
+         
+                    </div>
+                  
+
+                   
+                </div>
+
+               
+             </div>
+    
+
+    {{/each}}
+  
+                  
+
+                   
+                </div>
+
+</script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $.getJSON('https://api.sheety.co/08786f05-07e1-44d9-b3f8-e0e776b3990d', function (data) {
+                var template = Handlebars.compile($('#item-template2').html())
+                $('#items2').html(template(data))
+            })
+        })
+    </script>
+
+    <script id="item-template2" type="text/x-handlebars-template">
+        <div class="wrapper-search altsrc">
+        <img src="Assets/ic_search_24px.svg"><input type="text" id="myInput" onkeyup="myFunction()"
+            placeholder="Search for Apparel" title="Type in a Item">
+            <ul id="myUL">
+        
+    {{#each this}}
+
+
+    <li>
+        <a href="#{{iD1}}" ><p>{{itemName}}</p> <span style="display: none;">{{iD1}}</span>
+        </a>
+
+    </li>
+
+
+{{/each}}
+</ul>
+              
+</div>
+               
+          
+
+</script>
 </head>
 
 <body>
@@ -27,182 +176,26 @@
             <a href="clearence.html">
                 <li class="vivify fadeIn delay-150">Clearance</li>
             </a>
-            <a href="https://www.admiralnation.com/watch-live" target="_blank">
-                <li class="vivify fadeIn delay-150">Watch Live</li>
-            </a>
             <a href="https://goo.gl/maps/uRVhnmNfig32" target="_blank">
                 <li class="vivify fadeIn delay-150">Find Us</li>
             </a>
 
 
         </ul>
-        <div class="wrapper-search altsrc">
-            <img src="Assets/ic_search_24px.svg"><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Apparel" title="Type in a Item">
-
-            <ul id="myUL">
-                <li>
-                    <a href="tops_gucci1.html">Gulfport Designer T-Shirt Adidas
-                    </a>
-
-                </li>
-
-                <li>
-                    <a href="hats_visors.html">Adidas Visor
-                    </a>
-
-                </li>
-
-                <li>
-                    <a href="tops_longsleevetshirt.html">Admirals Longsleeve T-Shirt
-                    </a>
-
-                </li>
-
-                <li>
-                    <a href="tops_tshirt1.html">Gulfport Admirals T-Shirt
-                    </a>
-
-                </li>
-
-                <li>
-                    <a href="tops_longsleevetshirt.html">Long Sleeve T-Shirt
-                    </a>
-
-                </li>
-
-                <li>
-                    <a href="tops_tshirt2.html">Gulfport T-Shirt
-                    </a>
-
-                </li>
-
-                <li>
-                    <a href="tops_tshirt3.html">Gulfport Admirals T-Shirt
-                    </a>
-
-                </li>
-
-                <li>
-                    <a href="tops_tshirt4.html">Gulfport Admirals T-Shirt
-                    </a>
-
-                </li>
-
-                <li>
-                    <a href="tops_hoodies.html">Gulfport Hoodies
-                    </a>
-
-                </li>
-
-                <li>
-                    <a href="tops_zippullover.html">Quarter Zip Pullover
-                    </a>
-
-                </li>
-
-                <li>
-                    <a href="tops_longsleevetshirt2.html">Long Sleeve T-Shirt
-                    </a>
-
-                </li>
-
-                <li>
-                    <a href="tops_rainjacketwindbreaker.html">Rain Jacket Windbreaker
-                    </a>
-
-                </li>
-
-                <li>
-                    <a href="tops_whitepullover.html">White Pullover
-
-                    </a>
-
-                </li>
-
-                <li>
-                    <a href="hats_beanie.html">Beanie
-
-                    </a>
-
-                </li>
-
-
-                <li>
-                    <a href="hats_pompom.html">Pom Pom Beanie
-                    </a>
-
-                </li>
-
-                <li>
-                    <a href="hats_baseballhat.html">Baseball Hat
-                    </a>
-
-                </li>
-
-                <li>
-                    <a href="other_ghsmagnet.html">GHS Magnet
-
-                    </a>
-
-                </li>
-
-                <li>
-                    <a href="other_siliconwallet.html">Silicon Phone Wallet
-
-                    </a>
-
-                </li>
-
-                <li>
-                    <a href="bottoms_leggings.html">Adidas Leggings
-
-                    </a>
-
-                </li>
-
-                <li>
-                    <a href="other_stadiumseat.html">Stadium Seat
-
-                    </a>
-
-                </li>
-
-                <li>
-                    <a href="tops_gucci1.html">Adidas Men's Polo Shirt
-
-
-                    </a>
-
-                </li>
-
-                <li>
-                    <a href="tops_gucci1.html">Camo Sweatshirt
-
-                    </a>
-
-                </li>
-
-                <li>
-                    <a href="tops_gucci1.html">Silicon Phone Wallet
-
-                    </a>
-
-                </li>
-
-                <li>
-                    <a href="tops_sweatshirt.html">Comfort Color Sweatshirt</a>
-
-                </li>
-
-                <li>
-                    <a href="tops_gucci2.html">Gulfport Designer T-Shirt</a>
-
-                </li>
-
-
-
-            </ul>
+        <div id="items2">
+            <div class="loading-container vivify pulsate infinite">
+                <p>Loading...</p>
+            </div>
         </div>
+
+
+
+
+
+
+
+
+
 
     </nav>
     <script>
@@ -225,9 +218,12 @@
     </script>
 
     <div class="socialicons">
-        <a href="https://www.snapchat.com/add/admiralnation" target="_blank"><img style="right: 190px;" src="Branding/Snapchat Logo.svg"></a>
-        <a href="https://www.instagram.com/admiral_nation/?utm_source=ig_profile_share&igshid=1ehxczpkif6wd" target="_blank"><img style="right: 250px;" src="Branding/Instagram%20Logo.svg"> </a>
-        <a href="https://twitter.com/GHSstore" target="_blank"><img style="right: 310px;" src="Branding/Twitter%20Logo.svg"></a>
+        <a href="https://www.snapchat.com/add/admiralnation" target="_blank"><img style="right: 190px;"
+                src="Branding/Snapchat Logo.svg"></a>
+        <a href="https://www.instagram.com/admiral_nation/?utm_source=ig_profile_share&igshid=1ehxczpkif6wd"
+            target="_blank"><img style="right: 250px;" src="Branding/Instagram%20Logo.svg"> </a>
+        <a href="https://twitter.com/GHSstore" target="_blank"><img style="right: 310px;"
+                src="Branding/Twitter%20Logo.svg"></a>
     </div>
     <a href="Adidas.html"><img class="adidas" src="Branding/2000px-Adidas_Logo.svg.png"></a>
 
@@ -236,83 +232,85 @@
     <script>
         var toggle = document.getElementById("menu");
         var content = document.getElementById("items");
-        toggle.addEventListener("click", function() {
+        toggle.addEventListener("click", function () {
             content.style.display = (content.dataset.toggled ^= 1) ? "block" : "none";
         });
     </script>
 
 
+    <div id="items1"></div>
+    <script>
+        $(window).scroll(function () {
+            var scroll = $(window).scrollTop();
+            if (scroll > 300) {
+                $(".up").addClass("scrolled");
+            } else {
+                $(".up").removeClass("scrolled");
+            }
+        });
+    </script>
+    <script>
+        filterSelection("all")
 
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("filterDiv");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+        }
 
-    <div class="clothescontainer">
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {
+                    element.className += " " + arr2[i];
+                }
+            }
+        }
 
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
 
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script>
 
-        <a href="tops_tshirt4.html" >
-            <img data-aos="fade-up" src="ShopItems/T-Shirt 4 Thumbnail.jpg">
-        </a>
-
-        <a href="tops_gucci1.html"><img src="ShopItems/Gucci Thumbnail1.jpg" data-aos="fade-up"></a>
-
-        <a href="tops_tshirt2.html"><img src="ShopItems/T-Shirt2 Thumbnail.jpg" data-aos="fade-up"></a>
-
-        <a href="tops_tshirt1.html"><img src="ShopItems/T-Shirt1 Thumbnail.jpg" data-aos="fade-up"></a>
-
-        <a href="tops_menspoloshirt.html"><img src="ShopItems/Polo Shirt Thumbnail.jpg" data-aos="fade-up"></a>
-
-        <a href="tops_offshouldershirt.html" data-scroll><img style="box-shadow:0px 0px 0px;" src="ShopItems/Camo%20Sweatshirt%20Thumbnail.jpg" data-aos="fade-up"></a>
-
-        <a href="tops_gucci2.html"><img src="ShopItems/Gulfport%20Designer%202%20Thumbnail.jpg" data-aos="fade-up"></a>
-
-        <a href="tops_zippullover.html" data-scroll><img src="ShopItems/Quarter Zip Thumbnail.jpg" data-aos="fade-up"></a>
-
-        <a href="tops_admiralsweatshirt.html"><img src="ShopItems/Sweatshirt Thumbnail.jpg" data-aos="fade-up"></a>
-
-        <a href="tops_hoodies2.html"><img src="ShopItems/Charcoal Hoodie Thumbnail.jpg" data-aos="fade-up"></a>
-
-        <a href="tops_hoodies.html" data-scroll><img src="ShopItems/Hoodie Thumbnail.jpg" data-aos="fade-up"></a>
-
-        <a href="tops_sweatshirt.html" data-scroll><img src="ShopItems/Comfort%20Colors%20SweatShirt%20Thumbnail.jpg" data-aos="fade-up"></a>
-
-   <a href="tops_whitepullover.html" data-scroll><img style="box-shadow:0px 0px 0px;" class="" src="ShopItems/White Pullover Thumbnail.jpg" data-aos="fade-up"></a>
-
-        <a href="tops_longsleevetshirt3.html" data-scroll><img class="vivify fadeIn delay-450" src="ShopItems/Long Sleeve Thumbnail2.jpg" data-aos="fade-up"></a>
-
-        <a href="tops_longsleevetshirt2.html" data-scroll><img class="vivify fadeIn delay-150" src="ShopItems/Long Sleeve Thumbnail.jpg" data-aos="fade-up"></a>
-
-        <a href="tops_longsleevetshirt.html" data-scroll><img class="vivify fadeIn delay-550" src="ShopItems/Long sleeve T-Shirt1 Thumbnail.jpg" data-aos="fade-up"></a>
-
-        <a href="tops_tshirt3.html" data-scroll><img class="vivify fadeIn delay-250" src="ShopItems/T-Shirt3 Thumbnail.jpg" data-aos="fade-up"></a>
-
-        <a href="tops_rainjacketwindbreaker.html" data-scroll><img class="vivify fadeIn delay-600" src="ShopItems/Windbreaker Thumbnail.jpg" data-aos="fade-up"></a>
-
-        <a href="hats_pompom.html" data-scroll><img class="vivify fadeIn delay-1000" src="ShopItems/Pom Pom Beanie Thumbnail.jpg" data-aos="fade-up"></a>
-
-        <a href="hats_beanie.html" data-scroll><img class="vivify fadeIn delay-900" src="ShopItems/Beanie%20Thumbnail.jpg" data-aos="fade-up"></a>
-
-        <a href="hats_visors.html" data-scroll><img class="vivify fadeIn " src="ShopItems/Adidas Visor Thumbnail.jpg" data-aos="fade-up"></a>
-
-        <a href="hats_baseballhat.html" data-scroll><img class="vivify fadeIn delay-900" src="ShopItems/Baseball Hat Thumbnail.jpg" data-aos="fade-up"></a>
-
-        <a href="other_ghsmagnet.html" style="display: " data-scroll><img class="vivify fadeIn delay-1250" src="ShopItems/Magnet Thumbnail.jpg" data-aos="fade-up"></a>
-
-        <a href="other_siliconwallet.html" data-scroll><img class="vivify fadeIn delay-1500" src="ShopItems/PhoneWallet Thumbnail.jpg" data-aos="fade-up"></a>
-
-              <a href="bottoms_leggings.html" style="display: " data-scroll><img class="vivify fadeIn delay-500" src="ShopItems/Adidas Leagings Thumbnail.jpg" data-aos="fade-up"></a>
-
-        <a href="other_stadiumseat.html" data-scroll><img class="vivify fadeIn delay-600" src="ShopItems/Stadium Seat Thumbnail.jpg" data-aos="fade-up"></a>
+    <div class="paginate">
+        <a href="All.html">&laquo;</a>
+        <a href="All.html" class="pag-active">1</a>
+        <a href="Page2.html">2</a>
+        <a href="Page3.html">3</a>
+        <a href="Page2.html">&raquo;</a>
     </div>
 
 
 
 
-
-  
-
-
-
-
-
+    <script>
+        AOS.init();
+    </script>
 
 
 
@@ -320,7 +318,7 @@
 
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
 
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
@@ -329,13 +327,9 @@
             });
         });
     </script>
-     <script>
-        AOS.init();
-    </script>
     <footer>
         <h3> ©2019 Admiral Nation</h3>
     </footer>
-    
 </body>
 
 </html>
