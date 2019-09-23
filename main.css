@@ -446,11 +446,11 @@ input:focus~ul {
 }
 
 .carousel {
-    height: 650px;
+  
     background-color: white;
 
     margin-top: 75px;
-    height: calc(80vh - 110px);
+    height: 469px;
     border-bottom: solid;
     border-width: 1.3px;
     border-color: lightgray;
