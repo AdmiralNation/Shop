@@ -626,7 +626,7 @@ input:focus~ul {
     margin-bottom: -30px
 }
 
-.carousel-cell > img {height: 468.5px;}
+.carousel-cell > img {height: 468.5px;border-bottom: solid;border-bottom-color: lightgray; border-bottom-width: 1px; }
 
 .carousel-cellimg>a>img {
     width: 275px;
@@ -703,6 +703,8 @@ input:focus~ul {
     box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.14);
 }
 
+.hero-carousel {height:450px; border-bottom-width:1px;border-bottom-color: lightgray; border-bottom: solid;  }
+
 
 .clothescontainer {
     margin: auto;
@@ -737,7 +739,7 @@ margin-top: 80px;
 
 .loading-container {margin: auto; width: 50px;margin-top: 30vh;position: relative; z-index: -1;}
 
-.loading-container > p {height: 50px; object-fit: cover;border-radius: 250px; }
+.loading-container > p {border: solid; border-width: 1px; border-color: lightgray;height: 50px; object-fit: cover;border-radius: 250px; }
 
 .item-container > a > img:hover {cursor:default;}
 
