@@ -739,7 +739,7 @@ margin-top: 80px;
 
 .loading-container {margin: auto; width: 50px;margin-top: 30vh;position: relative; z-index: -1;}
 
-.loading-container > p {border: solid; border-width: 1px; border-color: lightgray;height: 50px; object-fit: cover;border-radius: 250px; }
+.loading-container > p {height: 50px; object-fit: cover;border-radius: 250px; }
 
 .item-container > a > img:hover {cursor:default;}
 
