@@ -642,6 +642,12 @@ input:focus~ul {
 
 }
 
+.loading-indicator {margin: auto; width: 150px;margin-top: 40vh;}
+
+.loading-indicator > img {width: 150px;;}
+
+.loading-indicator > h4 {float: left;}
+
 .mcontainer {
     display: none;
 }
