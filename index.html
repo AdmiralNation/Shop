@@ -87,17 +87,17 @@
                      <label>Enter Your Name</label>
                  <br>
                 
-                 <input name="entry.424118168" class="pickupinput half-input" type="text" placeholder="Your Name">
+                 <input name="entry.424118168" class="pickupinput half-input" type="text" placeholder="Your Name" required>
              </div>
              <div class="pickupgroup">
                  <label>Enter Your E-Mail</label>
                  <br>
             
-                 <input name="entry.1881122601" class="pickupinput half-input" type="email" placeholder="Your E-Mail">
+                 <input name="entry.1881122601" class="pickupinput half-input" type="email" placeholder="Your E-Mail" required>
              </div>
                  <br>
                  <label>Pickup Date</label>
-                 <input name="entry.199026238" class="pickupinput" type="date">
+                 <input name="entry.199026238" class="pickupinput" type="date" required>
                  <br>
                      
              <label>Pickup Time</label>
@@ -189,7 +189,9 @@
         <div id="items2"></div>
     </nav>
 
-    <div style="margin-top: 80px;" id="items1"><div class="loading-indicator"><img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif"></div></div>
+    <div style="margin-top: 80px;" id="items1">
+        <div class="loading-indicator"><img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif"></div>
+    </div>
     <script>
         function myFunction() {
             var input, filter, ul, li, a, i, txtValue;
