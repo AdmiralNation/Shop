@@ -51,91 +51,52 @@
 </style>
       
       <div  class="item-container filterDiv {{category}} {{status}}"><h4 class=" stock {{state}}">Out of Stock</h4>
-        {{{image}}}<h3>{{itemName}}</h3><p>{{price}}</p>   <div  class="shop-btn-container"><a class="shop-btn" href="#{{iD1}}">Shop</a></div>
+      {{{image}}}<h3>{{itemName}}</h3><p>{{price}}</p>   <div  class="shop-btn-container"><a onclick="document.getElementById('image-popup').innerHTML = '{{image}}';document.getElementById('nameitem').innerHTML = '{{itemName}}';document.getElementById('inputvalue').value = '{{itemName}}';document.getElementById('describe').innerHTML='{{description}}';document.getElementById('price').innerHTML='{{price}}';" class="shop-btn" href="#open">Order</a><a onclick="console.log('added to cart');localStorage.setItem('EU{{iD1}}','{{itemName}}');document.getElementById('M{{iD1}}').innerHTML = '{{itemName}}'" class="shop-btn" href="#UE{{iD1}}">Add To Cart</a></div>
      <div data-aos="fade-up"></div></div>
 
 <div id="{{iD1}}" class="item-popup">
 
   <div class="popup-container vivify fadeInBottom duration-300">
-         <a href="#shop"><i class="material-icons">close</i></a>
- <div class="image-popup">
-         {{{image}}}
- </div>  
-
-<div class="basic-text">
-  <h3>{{itemName}}</h3>
-  <p>{{price}}</p>
-  <div class="size-options">
-     <div class="Sizes {{small}}"><p>S</p></div>
-     <div class="Sizes {{medium}}"><p>M</p></div>
-     <div class="Sizes {{large}}"><p>L</p></div>
-     <div class="Sizes {{xLarge}}"><p>XL</p></div>
-     <div class="Sizes {{xXLarge}}"><p>XXL</p></div>
- </div>
- <div class="description">{{description}}</div>
-
- 
-
-     
-     <div class="form-container vivify fadeIn duration-200">
-     <div class="pickup-form" id="{{iD2}}">
-             <h3>Order For Pickup</h3>
-                   <form action="https://docs.google.com/forms/u/5/d/e/1FAIpQLSdEPTYEQmsVLSRjeabz0ENtYO9XetfUm3MyIM_nekYt2rRqEw/formResponse" method="POST" target="_self">
-                    <input name="entry.838953622" style="display: none;" type="text" placeholder="{{itemName}}" value="{{itemName}}">
-                 
-                 <div class="pickupgroup" style="margin-left: 0px;">  
-                     <label>Enter Your Name</label>
-                 <br>
-                
-                 <input name="entry.424118168" class="pickupinput half-input" type="text" placeholder="Your Name" required>
-             </div>
-             <div class="pickupgroup">
-                 <label>Enter Your E-Mail</label>
-                 <br>
-            
-                 <input name="entry.1881122601" class="pickupinput half-input" type="email" placeholder="Your E-Mail" required>
-             </div>
-                 <br>
-                 <label>Pickup Date</label>
-                 <input name="entry.199026238" class="pickupinput" type="date" required>
-                 <br>
-                     
-             <label>Pickup Time</label>
-                     <input class="pickupinput" type="time" name="entry.2134677315">
-                     <label>Choose A Size</label>
-                     <br>
-                     <select name="entry.31267234" class="filter forform" id = "myList">
-                             <option>Select Size</option>
-                             <option class="{{small}}" value = "small">Small</option>
-                             <option class="{{medium}}" value = "medium">Medium</option>
-                             <option class="{{large}}" value = "large">Large</option>
-                             <option class="{{xLarge}}" value = "xlarge">XLarge</option>
-                           </select>
-                  <br>
-                  <div class="submit-container">
-                     <button type="submit">Complete Order</button>
-                 </div>
-                 <p style="text-align: center;font-size:12px;color:black">Open Hours: 8:20am - 3:30pm Weekdays</p>
-                 </form>
-             </div>
-         </div>
-
-     </div>
-   
-
-    
- </div>
-
-
+         <a href="#open"><i class="material-icons">close</i></a>
 </div>
-
-
+</div>
 {{/each}}
 
     </div>          
 
  </script>
 
+
+
+ <script type="text/javascript">
+    $(document).ready(function () {
+        $.getJSON('https://api.sheety.co/08786f05-07e1-44d9-b3f8-e0e776b3990d', function (data) {
+            var template = Handlebars.compile($('#item-template3').html())
+            $('#items3').html(template(data))
+        })
+    })
+</script>
+
+<script id="item-template3" type="text/x-handlebars-template">
+
+<div class="incart">
+
+    
+{{#each this}}
+<style>
+
+</style>
+
+<div id="UE{{iD1}}" class="incart-item">
+    <img style="display:none" onload=" document.getElementById('M{{iD1}}').innerHTML = localStorage.getItem('EU{{iD1}}');" src="https://media2.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif">
+    <p  id="M{{iD1}}"></p>
+    <div class="cart-item-button">
+        <button onclick="localStorage.removeItem('EU{{iD1}}');document.getElementById('M{{iD1}}').innerHTML = '';">Remove From Cart</button>
+    </div>
+</div>
+{{/each}}
+</div>          
+</script>
     <script id="item-template2" type="text/x-handlebars-template">
         <div class="wrapper-search altsrc">
             <img src="Assets/ic_search_24px.svg"><input type="text" id="myInput" onkeyup="myFunction()"
@@ -169,7 +130,7 @@
 
     </style>
 
-    <nav><img class="menu" id="menu" src="Assets/outline-menu-24px (1).svg">
+    <nav><img class="menu " id="menu" src="Assets/outline-menu-24px (1).svg">
         <a href="index.html"><img src="Branding/admiralnationdotcom Logo.png"></a>
         <ul id="items">
             <a href="index.html">
@@ -186,10 +147,11 @@
             </a>
         </ul>
 
-        <div id="items2"></div>
+        <div id="items2" ></div>
+        
     </nav>
 
-    <div style="margin-top: 80px;" id="items1">
+    <div style="margin-top: 80px;" id="items1" >
         <div class="loading-indicator"><img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif"></div>
     </div>
     <script>
@@ -210,9 +172,11 @@
             }
         }
     </script>
-
-
+ <a href="#items3">
+    <img class="cartIcon" src="/Assets/Cart Icon.png">
+</a>
     <div class="socialicons">
+       
         <a href="https://www.snapchat.com/add/admiralnation" target="_blank"><img style="right: 190px;"
                 src="Branding/Snapchat Logo.svg"></a>
         <a href="https://www.instagram.com/admiral_nation/?utm_source=ig_profile_share&igshid=1ehxczpkif6wd"
@@ -233,8 +197,89 @@
 
 
 
+ 
+<div  class="item-container filterDiv {{category}} {{status}}"><h4 class=" stock {{state}}">Out of Stock</h4>
+    {{{image}}}<h3>{{itemName}}</h3><p>{{price}}</p>   <div  class="shop-btn-container"><a  class="shop-btn" href="#open">Shop</a></div>
+ <div data-aos="fade-up"></div></div>
+
+<div id="open" class="item-popup" >
+
+<div class="popup-container vivify fadeInBottom duration-300">
+     <a href="#shop"><i class="material-icons">close</i></a>
+<div class="image-popup" id="image-popup">
+     {{{image}}}
+</div>  
+
+<div class="basic-text">
+<h3 id="nameitem">{{itemName}}</h3>
+<p id="price">{{price}}</p>
+<div class="size-options">
+ <div class="Sizes {{small}}"><p>S</p></div>
+ <div class="Sizes {{medium}}"><p>M</p></div>
+ <div class="Sizes {{large}}"><p>L</p></div>
+ <div class="Sizes {{xLarge}}"><p>XL</p></div>
+ <div class="Sizes {{xXLarge}}"><p>XXL</p></div>
+</div>
+<div class="description" id="describe"></div>
 
 
+
+ 
+ <div class="form-container vivify fadeIn duration-200">
+ <div class="pickup-form" id="{{iD2}}">
+         <h3>Order For Pickup</h3>
+               <form action="https://docs.google.com/forms/u/5/d/e/1FAIpQLSdEPTYEQmsVLSRjeabz0ENtYO9XetfUm3MyIM_nekYt2rRqEw/formResponse" method="POST" target="_self">
+                <input id="inputvalue" name="entry.838953622" style="display: none;" type="text" placeholder="{{itemName}}" value="{{itemName}}">
+             
+             <div class="pickupgroup" style="margin-left: 0px;">  
+                 <label>Enter Your Name</label>
+             <br>
+            
+             <input name="entry.424118168" class="pickupinput half-input" type="text" placeholder="Your Name" required>
+         </div>
+         <div class="pickupgroup">
+             <label>Enter Your E-Mail</label>
+             <br>
+        
+             <input name="entry.1881122601" class="pickupinput half-input" type="email" placeholder="Your E-Mail" required>
+         </div>
+             <br>
+             <label>Pickup Date</label>
+             <input name="entry.199026238" class="pickupinput" type="date" required>
+             <br>
+                 
+         <label>Pickup Time</label>
+                 <input class="pickupinput" type="time" name="entry.2134677315">
+                 <label>Choose A Size</label>
+                 <br>
+                 <select name="entry.31267234" class="filter forform" id = "myList">
+                         <option>Select Size</option>
+                         <option class="{{small}}" value = "small">Small</option>
+                         <option class="{{medium}}" value = "medium">Medium</option>
+                         <option class="{{large}}" value = "large">Large</option>
+                         <option class="{{xLarge}}" value = "xlarge">XLarge</option>
+                       </select>
+              <br>
+              <div class="submit-container">
+                 <button type="submit">Complete Order</button>
+             </div>
+             <p style="text-align: center;font-size:12px;color:black">Open Hours: 8:20am - 3:30pm Weekdays</p>
+             </form>
+         </div>
+     </div>
+
+ </div>
+
+
+
+</div>
+
+
+</div>
+
+<div id="items3">
+
+</div>
 
 
     <div class="popupm vivify popOut delay-5250" style="display:none;">
@@ -243,7 +288,7 @@
 
 
     <footer>
-        <h3> ©2018 Admiral Nation</h3>
+        <h3> ©2020 Admiral Nation</h3>
     </footer>
 
 </body>

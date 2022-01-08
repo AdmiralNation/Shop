@@ -1,12 +1,12 @@
 @charset "UTF-8";
 
-/* CSS Document */
-
 
 
 a {
     text-decoration: none;
 }
+
+html {scroll-behavior: smooth;}
 
 body {
     text-decoration: none;
@@ -28,6 +28,11 @@ header {
 
 }
 
+
+
+#open {display: none; ;}
+
+#open:target {display: block;}
 
 .mySlides>img {
     height: 600px;
@@ -270,7 +275,7 @@ border-radius: 5px;
 
 .wrapper-search {
     position: fixed;
-    right: 222px;
+    right: 280px;
     margin-top: -27px;
     border: solid;
     border-width: 1.3px;
@@ -337,7 +342,7 @@ input:focus~ul {
 .socialicons {
     position: fixed;
     z-index: 50;
-    right: 50px;
+    right: 120px;
     top: 20px
 }
 
@@ -763,13 +768,17 @@ margin-top: 80px;
     padding-bottom: 3px;
     border-radius: 4px;
     transition: 0.3s ease;
+    display: inline-block;
+    margin-left: 10px;
 }
+
+.shop-btn:first-of-type {margin-left: 0px;background-color: #012395;color: white;border: none;}
 
 .shop-btn:hover {background-color: lightgray;}
 
 .shop-btn-container {
     margin: auto;
-    width: 60px;
+    width: 178px;
     margin-top: -5px;
     padding-bottom: 15px;
 }
@@ -1119,7 +1128,7 @@ details summary::-webkit-details-marker {
 
 .pickup-form > h3 {text-align: center;font-weight: normal;}
 
-.half-input {width: 175px;}
+.half-input {width:100%}
 
 .submit-container {margin: auto; width: 120px;margin-top: 10px;}
 
@@ -1133,7 +1142,7 @@ border: none;}
 
 .submit-container > button:hover {cursor: pointer;}
 
-.pickupgroup {float:left ;margin-left: 15px;;}
+.pickupgroup {margin-left: 35px;display: inline-block;width: 45%;}
 
 .feedbackcontainer {
     margin: auto;
@@ -1430,8 +1439,15 @@ input[type=submit]:active {
 
 
 
+/*-------------------------------------------Cart----------------------------------*/
 
+.cartIcon {position: fixed; top: 10px; width: 60px; height: 60px;right: 30px;z-index: 150;object-fit: scale-down;transition: 0.2s ease;}
 
+.cartIcon:hover {filter: saturate(0);opacity: 0.5;}
+
+.incart-item {padding-top: 100px;display: inline-block;}
+
+.incart-item {width: 100px; height: 100px; object-fit: cover;}
 
 
 
